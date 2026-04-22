@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Renata Mailen - 3 Años</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-elsa: #b0e0e6;
+            --azul-profundo: #4682b4;
+            --blanco-nieve: #ffffff;
+            --plata: #d1d1d1;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(to bottom, #e0f7fa, #80deea);
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .invitacion {
+            max-width: 500px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 4px solid var(--azul-elsa);
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: var(--azul-profundo);
+            margin-bottom: 10px;
+        }
+
+        .mensaje-principal {
+            font-style: italic;
+            padding: 0 15px;
+            line-height: 1.6;
+        }
+
+        /* Galería en forma de lista */
+        .galeria-lista {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .galeria-lista li {
+            margin-bottom: 15px;
+        }
+
+        .galeria-lista img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+            border: 3px solid var(--azul-elsa);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .datos-evento {
+            background: var(--azul-elsa);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .frase-piscina {
+            background: #ffeb3b;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* Cuenta Regresiva */
+        #cuenta-regresiva {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .bloque-tiempo {
+            background: var(--azul-profundo);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            min-width: 60px;
+        }
+
+        .numero { font-size: 1.5rem; font-weight: bold; display: block; }
+
+        /* Botones */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px 0;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-mapa {
+            background-color: var(--azul-profundo);
+            color: white;
+        }
+
+        .btn-ws {
+            background-color: transparent;
+            color: var(--azul-profundo);
+            border: 1px solid var(--azul-profundo);
+            font-size: 0.9rem;
+        }
+
+        .audio-player {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="invitacion">
+        <h1>Renata Mailen</h1>
+        <p class="mensaje-principal">
+            “Mi corazón se llena de alegría al cumplir 3 años, y me encantaría que compartieras este día tan especial conmigo. ¡Te espero para celebrar mi cumpleaños!”
+        </p>
+
+        <ul class="galeria-lista">
+            <li><img src="foto1.jpg" alt="Renata 1"></li>
+            <li><img src="foto2.jpg" alt="Renata 2"></li>
+            <li><img src="foto3.jpg" alt="Renata 3"></li>
+            <li><img src="foto4.jpg" alt="Renata 4"></li>
+            <li><img src="foto5.jpg" alt="Renata 5"></li>
+            <li><img src="foto6.jpg" alt="Renata 6"></li>
+        </ul>
+
+        <div class="datos-evento">
+            <p><strong>FECHA:</strong> Sábado 9 de mayo</p>
+            <p><strong>HORA:</strong> 11:30 am</p>
+            <p><strong>LUGAR:</strong> LA QUINTA PROVIDENCIA</p>
+            <a href="https://maps.app.goo.gl/3z5QvTfH5BmRBDx77?g_st=ac" class="btn btn-mapa" target="_blank">📍 Ver Ubicación</a>
+        </div>
+
+        <div class="frase-piscina">
+            🌊 ¡Habrá piscina, así que trae tu traje de baño!
+        </div>
+
+        <h3>Faltan:</h3>
+        <div id="cuenta-regresiva">
+            <div class="bloque-tiempo"><span class="numero" id="dias">00</span>Días</div>
+            <div class="bloque-tiempo"><span class="numero" id="horas">00</span>Horas</div>
+            <div class="bloque-tiempo"><span class="numero" id="minutos">00</span>Min</div>
+        </div>
+
+        <a href="https://wa.me/9672727381?text=Hola!%20Confirmo%20mi%20asistencia%20al%20cumple%20de%20Renata" class="btn btn-ws">
+            Confirmar por WhatsApp
+        </a>
+
+        <div class="audio-player">
+            <p style="font-size: 0.8rem;">Escucha mi canción favorita:</p>
+            <audio controls autoplay loop>
+                <source src="musica.mp3" type="audio/mpeg">
+                Tu navegador no soporta el audio.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        // Cuenta regresiva para el 9 de mayo
+        const fechaEvento = new Date('May 9, 2026 11:30:00').getTime();
+
+        const timer = setInterval(function() {
+            const ahora = new Date().getTime();
+            const diferencia = fechaEvento - ahora;
+
+            const d = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("dias").innerHTML = d;
+            document.getElementById("horas").innerHTML = h;
+            document.getElementById("minutos").innerHTML = m;
+
+            if (diferencia < 0) {
+                clearInterval(timer);
+                document.getElementById("cuenta-regresiva").innerHTML = "¡ES HOY!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
